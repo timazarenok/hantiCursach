@@ -1,0 +1,68 @@
+﻿<Window x:Class="Hatni.InfoWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hatni"
+        mc:Ignorable="d"
+        Title="InfoWindow" Height="450" Width="800">
+    <Grid>
+        <ScrollViewer>
+            <StackPanel>
+                <Label FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Top">Руководство по использованию</Label>
+                <Label FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,50,0,0">Добавление данных</Label>
+                <TextBlock TextWrapping="Wrap" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Width="700">
+            Добавление данных в базу данных осуществляется с помощью форм и ввода данных в текстовые блоки.
+            <LineBreak/>
+            <LineBreak/>
+            <Bold>Для добавлвения в таблицу Users</Bold>
+            <LineBreak/>
+            <LineBreak/>
+            Для добавления в таблицу Users, нужно открыть окно Регистрации и ввести email и 
+            Вы автомотически зарегестрируетесь и войдете в систему
+            <LineBreak/>
+            <LineBreak/>
+            <Bold>Для добавлвения в таблицу Tables</Bold>
+            <LineBreak/>
+            <LineBreak/>
+            Для добавления в таблицу Table, для начала нужно авторизоваться как Администратор и открыть окно относящееся к столам в заведении. 
+            Кнопка "Столы". После открытия окна в соответствующий текстовое поля для ввода ввести номер стола, максимально возможное кол-во посетителей и нажать на кнопку "Добавить".
+            После чего комната успешно добавить в базу данных. Для того чтобы удалить стол нужно ввести ТОЛЬКО НОМЕР стола и нажамть на кнопку "Удалить".
+            Запомните при удалении действующего стола, ьронь так же будет удалена.
+            <LineBreak/>
+            <LineBreak/>
+            <Bold>Для добавлвения в таблицу Events</Bold>
+            <LineBreak/>
+            <LineBreak/>
+            Для добавления в таблицу Events для начала нужно авторизоваться как Администратор и открыть окно
+            Мероприятия, где нужно ввести название мероприятия и время его проведения, после чего нажать на кнопку
+            "Добавить". Для удаления нужно ввести ТОЛЬКО НАЗВАНИЕ мероприятия. После чего все забронированные столики автоматически очистят базу.
+            <LineBreak/>
+            <LineBreak/>
+            <Bold>Для добавлвения в таблицу Review</Bold>
+            <LineBreak/>
+            <LineBreak/>
+            Добавление в таблицу Review это непосредственное добавление отзыва. Для отправки отзыва нужно
+            Авторизоваться как пользователь, дальше Вам откроется окно где будет Написано ОТЗЫВ и под ним будет
+            находится текстовый блок в который надо написать свой отзыва не больше 300 символов. После чего нажать
+                    на кнопку "Отправить"
+            <LineBreak/>
+            <LineBreak/>
+            <Bold>Для бронироания столика</Bold>
+            <LineBreak/>
+            <LineBreak/>
+             Для бронироания столика требутеся Авторизоваться как пользователь, дальше Вам откроется окно где будет
+                    слева располагаться список приближающихся мероприятий. Кликнув дважды на одно из них откроется окно
+                    с формой для бронирования, где надо вписать Телефон и Время прибытия. А также выбрать номер столика.
+                </TextBlock>
+                <Label FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0">Экспорт отчетов</Label>
+                <TextBlock Margin="0,0,0,0" TextWrapping="Wrap" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Width="700">
+            Экспорт данных осуществляется в EXCEL. Чтобы сделать выписку отчета по отзывам либо забронированным столикам, 
+            надо нажать на кнопку с соответствующим отчетом либо Бронь либо Отзывы.
+            и Вам откроется соответствующее окно с отчетом. Далее надо нажать на кнопку "Отчет в EXCEL" и программа автоматически откроет вам эту
+            таблицн в Excel.
+                </TextBlock>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
