@@ -54,5 +54,11 @@ namespace Hatni
             window.Show();
             Close();
         }
+
+        private void Products_Click(object sender, RoutedEventArgs e)
+        {
+            AddProducts window = new AddProducts();
+            window.Show();
+        }
     }
 }

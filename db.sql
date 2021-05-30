@@ -28,11 +28,21 @@ telephone varchar(15),
 [time] varchar(5)
 )
 
+create table Products(
+id int Identity(1,1) primary key,
+[name] varchar(50),
+price decimal(10,2)
+)
+
+create table Bron_Products (
+id int Identity(1,1) primary key,
+bron_id int references Bron(id) on delete cascade,
+product_id int references Products(id) on delete cascade,
+)
+
 create table Reviews(
 id int Identity(1,1) primary key,
 [user_id] int references Users(id) on delete cascade,
 [text] varchar(300)
 )
 
-select email, [text] from Reviews join Users on Reviews.user_id = Users.id
-SELECT * FROM Tables WHERE NOT EXISTS (SELECT * FROM Bron WHERE Bron.table_id = Tables.id and Bron.event_id != 2);

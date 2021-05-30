@@ -8,6 +8,7 @@ namespace Hatni
 {
     class BronItem
     {
+        public string ID { get; set; }
         public string Email { get; set; }
         public string Telephone { get; set; }
         public string Number { get; set; }

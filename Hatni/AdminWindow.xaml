@@ -12,6 +12,7 @@
             <Button x:Name="Events" Content="Мероприятия" Width="200" Height="30" FontSize="18" Click="Events_Click"/>
             <Button x:Name="Reviews" Content="Отзывы" Width="200" Height="30" FontSize="18" Click="Reviews_Click"/>
             <Button x:Name="Bron" Content="Бронь" Width="200" Height="30" FontSize="18" Click="Bron_Click"/>
+            <Button x:Name="Products" Content="Продукты" Width="200" Height="30" FontSize="18" Click="Products_Click"/>
         </StackPanel>
         <Button x:Name="Exit" Width="120" Height="25" Content="Выход" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,20,10" Click="Exit_Click"/>
     </Grid>

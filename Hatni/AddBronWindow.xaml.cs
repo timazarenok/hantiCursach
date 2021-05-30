@@ -32,7 +32,7 @@ namespace Hatni
         private void SetTables()
         {
             int event_id = SqlDB.GetId($"select * from Events where name='{Ev.Name}'");
-            DataTable dt = SqlDB.Select($"SELECT * FROM Tables WHERE NOT EXISTS (SELECT * FROM Bron WHERE Bron.table_id = Tables.id and Bron.event_id != {event_id});");
+            DataTable dt = SqlDB.Select($"SELECT * FROM Tables WHERE NOT EXISTS (SELECT * FROM Bron WHERE Bron.table_id = Tables.id and Bron.event_id = {event_id});");
             List<string> tables = new List<string>();
             foreach (DataRow dr in dt.Rows)
             {

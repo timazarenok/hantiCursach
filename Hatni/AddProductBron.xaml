@@ -1,0 +1,27 @@
+﻿<Window x:Class="Hatni.AddProductBron"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hatni"
+        mc:Ignorable="d"
+        Title="AddProductBron" Height="600" Width="400">
+    <Grid>
+        <StackPanel Margin="0,20,0,0">
+            <TextBlock Width="250" Text="Добавление блюд из меню к заброннированному столику" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+            <ComboBox x:Name="Numbers" Width="120" Height="25" Margin="0,20,0,0" SelectionChanged="Numbers_SelectionChanged"/>
+            <ComboBox x:Name="Products" Width="120" Height="25" Margin="0,20,0,0"/>
+            <Button x:Name="Add" Width="120" Height="25" Click="Add_Click" Content="Добавить" Margin="0,20,0,0"/>
+            <DataGrid x:Name="Table" Height="200" Margin="0,20,0,0" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding Path=ID}" Width="30"/>
+                    <DataGridTextColumn Header="Название" Binding="{Binding Path=Name}" Width="200"/>
+                    <DataGridTextColumn Header="Цена" Binding="{Binding Path=Price}" Width="150"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <TextBlock Text="ID" HorizontalAlignment="Center" TextWrapping="Wrap"/>
+            <TextBox x:Name="ID" Width="120" Height="25" Margin="0,20,0,0" PreviewTextInput="ID_PreviewTextInput"/>
+            <Button x:Name="Delete" Content="Удалить" Width="120" Height="25" Margin="0,20,0,0" Click="Delete_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

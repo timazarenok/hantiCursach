@@ -32,3 +32,9 @@ C:\Users\timog\OneDrive\Desktop\Hatni\Hatni\obj\Debug\Interop.Office2013CustomAc
 C:\Users\timog\OneDrive\Desktop\Hatni\Hatni\obj\Debug\Hatni.csproj.ResolveComReference.cache
 C:\Users\timog\OneDrive\Desktop\Hatni\Hatni\obj\Debug\AddBronWindow.g.cs
 C:\Users\timog\OneDrive\Desktop\Hatni\Hatni\obj\Debug\AddBronWindow.baml
+C:\Users\timog\OneDrive\Desktop\Hatni\Hatni\obj\Debug\MyBronWindow.g.cs
+C:\Users\timog\OneDrive\Desktop\Hatni\Hatni\obj\Debug\MyBronWindow.baml
+C:\Users\timog\OneDrive\Desktop\Hatni\Hatni\obj\Debug\AddProducts.g.cs
+C:\Users\timog\OneDrive\Desktop\Hatni\Hatni\obj\Debug\AddProducts.baml
+C:\Users\timog\OneDrive\Desktop\Hatni\Hatni\obj\Debug\AddProductBron.g.cs
+C:\Users\timog\OneDrive\Desktop\Hatni\Hatni\obj\Debug\AddProductBron.baml

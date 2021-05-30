@@ -26,5 +26,6 @@
         <TextBlock Text="Отзыв" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="350,0,0,180"/>
         <TextBox x:Name="Text" Width="300" TextWrapping="Wrap" Height="150" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,150,70,119"/>
         <Button x:Name="Add" Width="150" Height="30" Content="Отправить" Margin="350,250,0,0" Click="Add_Click"/>
+        <Button x:Name="MyTables" Width="250" Height="30" Content="Заброннированные столы" Margin="60,380,0,0" Click="MyTables_Click"/>
     </Grid>
 </Window>

@@ -67,5 +67,11 @@ namespace Hatni
                 MessageBox.Show("Введите отзыв");
             }
         }
+
+        private void MyTables_Click(object sender, RoutedEventArgs e)
+        {
+            MyBronWindow window = new MyBronWindow();
+            window.Show();
+        }
     }
 }
