@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -29,7 +30,7 @@ namespace Hatni
 
         private void SetBrons()
         {
-            DataTable dt = SqlDB.Select("select Users.email, [Tables].number, [Events].[name], [Events].[date], telephone, [time] from Bron" +
+            DataTable dt = SqlDB.Select("select Bron.id, Users.email, [Tables].number, [Events].[name], [Events].[date], telephone, [time] from Bron" +
                 " join[Tables] on Bron.table_id = [Tables].id" +
                 " join Users on Bron.[user_id] = Users.id" +
                 " join[Events] on Bron.event_id = [Events].id");
@@ -37,6 +38,7 @@ namespace Hatni
             foreach (DataRow dr in dt.Rows)
             {
                 tables.Add(new BronItem { 
+                    ID = dr["id"].ToString(),
                     Email = dr["email"].ToString(), 
                     Telephone = dr["telephone"].ToString(),
                     Number = dr["number"].ToString(),
@@ -73,6 +75,24 @@ namespace Hatni
                 ExcelApp.Cells[j + 2, 6] = list[j].Time;
             }
             ExcelApp.Visible = true;
+        }
+
+        private void IdBron_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            Regex reg = new Regex("[^0-9]+");
+            e.Handled = reg.IsMatch(e.Text);
+        }
+
+        private void Submit_Click(object sender, RoutedEventArgs e)
+        {
+            int id = Convert.ToInt32(IdBron.Text);
+            DataTable dt = SqlDB.Select($"select * from Bron_Products join Products on Products.id = Bron_Products.product_id where bron_id={id}");
+            List<Product> products = new List<Product>();
+            foreach(DataRow dr in dt.Rows)
+            {
+                products.Add(new Product { Name = dr["name"].ToString(), Price = dr["price"].ToString() });
+            }
+            Products.ItemsSource = products;
         }
     }
 }

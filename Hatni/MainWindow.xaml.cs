@@ -73,5 +73,11 @@ namespace Hatni
             MyBronWindow window = new MyBronWindow();
             window.Show();
         }
+
+        private void Reviews_Click(object sender, RoutedEventArgs e)
+        {
+            UsersReviews window = new UsersReviews();
+            window.Show();
+        }
     }
 }

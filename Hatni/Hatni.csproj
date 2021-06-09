@@ -95,6 +95,9 @@
     <Compile Include="TablesWindow.xaml.cs">
       <DependentUpon>TablesWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UsersReviews.xaml.cs">
+      <DependentUpon>UsersReviews.xaml</DependentUpon>
+    </Compile>
     <Page Include="AddBronWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -151,6 +154,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TablesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsersReviews.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

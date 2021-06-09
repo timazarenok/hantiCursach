@@ -70,6 +70,7 @@ namespace Hatni
                 $"join Products on Bron_Products.product_id = Products.id " +
                 $"where bron_id ={ bron_id}");
             List<Product> products = new List<Product>();
+            double sum = 0;
             foreach (DataRow dr in dt.Rows)
             {
                 products.Add(new Product
@@ -78,7 +79,9 @@ namespace Hatni
                     Name = dr["name"].ToString(),
                     Price = dr["price"].ToString()
                 }); ;
+                sum += Convert.ToDouble(dr["price"].ToString());
             }
+            Result.Text = "Итого: " + sum;
             Table.ItemsSource = products;
         }
 

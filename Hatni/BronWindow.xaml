@@ -5,17 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Hatni"
         mc:Ignorable="d"
-        Title="BronWindow" Height="450" Width="800">
+        Title="BronWindow" Height="850" Width="800">
     <Grid>
         <Button x:Name="Excel" Content="Отчет в эксель" Width="120" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,20,0,0" Click="Excel_Click"/>
-        <DataGrid x:Name="Table" AutoGenerateColumns="False" Width="750" Height="300" Margin="0, 0, 0, 0">
+        <DataGrid x:Name="Table" AutoGenerateColumns="False" Width="750" Height="300" VerticalAlignment="Top" Margin="0, 100, 0, 0">
             <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="30" Binding="{Binding Path=ID}"/>
                 <DataGridTextColumn Header="Email" Width="100" Binding="{Binding Path=Email}"/>
                 <DataGridTextColumn Header="Телефон" Width="150" Binding="{Binding Path=Telephone}" />
                 <DataGridTextColumn Header="Стол" Width="50" Binding="{Binding Path=Number}" />
                 <DataGridTextColumn Header="Мероприятие" Width="200" Binding="{Binding Path=Name}" />
                 <DataGridTextColumn Header="Дата" Width="100" Binding="{Binding Path=Date}" />
                 <DataGridTextColumn Header="Время" Width="70" Binding="{Binding Path=Time}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,50,0,0">Введите ID брони чтобы просмотреть блюда которые заказали</Label>
+        <TextBox x:Name="IdBron" Width="120" Height="30" Margin="0,150,0,0" PreviewTextInput="IdBron_PreviewTextInput"/>
+        <Button x:Name="Submit" Width="200" Content="Просмотреть" Height="30" Margin="0,250,0,0" Click="Submit_Click"/>
+        <DataGrid x:Name="Products" AutoGenerateColumns="False" Width="250" Height="260" VerticalAlignment="Center" Margin="0, 550, 0, 0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Width="100" Binding="{Binding Path=Name}"/>
+                <DataGridTextColumn Header="Email" Width="100" Binding="{Binding Path=Price}"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

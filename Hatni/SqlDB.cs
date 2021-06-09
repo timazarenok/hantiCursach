@@ -11,7 +11,7 @@ namespace Hatni
 {
     class SqlDB
     {
-        private const string connectionString = @"Server=DESKTOP-VAR3OC6\SQLEXPRESS;Database=HutniBrovar;Trusted_Connection=True;";
+        private const string connectionString = @"Server=DANIKDRANIK\TEW_SQLEXPRESS;Database=HutniBrovar;Trusted_Connection=True;";
         public static int UserID = 0;
         public static bool Command(string expression)
         {

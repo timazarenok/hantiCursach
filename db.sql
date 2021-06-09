@@ -45,4 +45,3 @@ id int Identity(1,1) primary key,
 [user_id] int references Users(id) on delete cascade,
 [text] varchar(300)
 )
-
